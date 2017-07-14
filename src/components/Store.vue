@@ -2,7 +2,7 @@
     <div class="store" @click="buy">
         <div class="desc">
             <h4>{{ producer.name }}</h4>
-            <small>(+{{ producer.cookiePerSeconds.toLocaleString('fr-FR', { maximumFractionDigits: 2 }) }} cookies/sec)</small>
+            <small>+{{ producer.cookiePerSeconds.toLocaleString('fr-FR', { maximumFractionDigits: 2 }) }} cookies/s</small>
             <div class="price">
                 <img class="icon" src="/static/svg/cookie.svg" alt="">
                 <div :class="{'text-green': canBuy === true, 'text-red': canBuy === false }">{{ producer.price.toLocaleString('fr-FR', { maximumFractionDigits: 2 }) }}</div>
@@ -41,6 +41,7 @@
 
 <style scoped>
     .store {
+        position: relative;
         font-family: 'Oswald', cursive;
         padding: 20px;
         border-bottom: solid 2px rgba(255, 255, 255, .2);
@@ -48,6 +49,12 @@
         align-items: center;
         cursor: pointer;
         user-select: none;
+        overflow-x: auto;
+    }
+
+    .popup {
+        position: absolute;
+        transform: translateX(-100%);
     }
 
     .store:hover {

@@ -16,7 +16,7 @@ const mutations = {
             if (producer.id === producerId) {
                 producer.purchased++
                 state.cookies -= producer.price
-                producer.price = 1.12 * producer.price
+                producer.price = 1.22 * producer.price
             }
 
             return producer

@@ -33,21 +33,28 @@ const producers = [
         id: uuid(),
         name: 'Cookie Factory',
         price: 3000,
-        cookiePerSeconds: 300,
+        cookiePerSeconds: 250,
         purchased: 0
     },
     {
         id: uuid(),
-        name: 'Cookie City',
+        name: 'Cookie Mine',
         price: 7000,
-        cookiePerSeconds: 1000,
+        cookiePerSeconds: 600,
+        purchased: 0
+    },
+    {
+        id: uuid(),
+        name: 'Cookie Lab',
+        price: 10000,
+        cookiePerSeconds: 900,
         purchased: 0
     },
     {
         id: uuid(),
         name: 'Cookie Time Machine',
         price: 20000,
-        cookiePerSeconds: 8000,
+        cookiePerSeconds: 1900,
         purchased: 0
     },
     {

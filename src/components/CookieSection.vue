@@ -1,11 +1,13 @@
 <template>
     <section class="cookie-container">
         <div class="header">
-            <div class="cookie-count" ref="cookieCount">
-                {{ cookies.toLocaleString('fr-FR', { maximumFractionDigits: 2 }) }}
-            </div>
-            <div style="display: inline-block">
-                cookies
+            <div class="score">
+                <div class="cookie-count" ref="cookieCount">
+                    {{ cookies.toLocaleString('fr-FR', { maximumFractionDigits: 2 }) }}
+                </div>
+                <div style="display: inline-block">
+                    cookies
+                </div>
             </div>
         </div>
         <div class="content">
@@ -54,7 +56,7 @@
         font-family: 'Oswald', sans-serif;
         background: rgba(0, 0, 0, .4);
         text-align: center;
-        padding: 30px 0px;
+        padding: 30px 10px;
         font-size: 32px;
         color: white;
         user-select: none;

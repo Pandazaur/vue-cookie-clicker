@@ -2,9 +2,9 @@
     <section class="shop-container">
         <div class="header">
             <h2 class="pad">Shop</h2>
-            <div class="store-list">
-                <store v-for="producer in producers" :producer="producer" :key="producer.name" />
-            </div>
+        </div>
+        <div class="store-list">
+            <store v-for="producer in producers" :producer="producer" :key="producer.name" />
         </div>
     </section>
 </template>
@@ -27,10 +27,21 @@
 
 <style scoped>
     .shop-container {
+        position: relative;
         background: #222;
         color: white;
         width: 300px;
-        overflow-y: auto;
+        overflow-y: scroll;
+    }
+
+    .shop-container::before {
+        position: absolute;
+        content: "X";
+        top: 0;
+        left: 0;
+        padding: 15px 30px;
+        transform: translateX(-100%);
+        z-index: 1000;
     }
 
     h2 {
@@ -47,5 +58,6 @@
     .store-list {
         display: flex;
         flex-direction: column;
+        overflow-y: auto;
     }
 </style>
