@@ -7,7 +7,7 @@ Vue.use(Vuex)
 
 const state = {
     producers: producers,
-    cookies: 100000000000000
+    cookies: 0
 }
 
 const mutations = {
